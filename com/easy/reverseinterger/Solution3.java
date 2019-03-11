@@ -1,12 +1,15 @@
 package com.easy.reverseinterger;
 
-import java.lang.Math;
-
-public class Solution1 {
+public class Solution3 {
     int reverse(int x) {
         long result = 0;
         int sign = x > 0 ? 1 : -1;
-        int normalized = Math.abs(x);
+        int normalized = 0;
+        if (x<0) {
+            normalized = 0-x;
+        } else {
+            normalized = x;
+        }
         while (normalized > 0) {
             long val = normalized % 10;
             result = val + result * 10;
@@ -14,6 +17,6 @@ public class Solution1 {
 
         }
 
-        return result > Integer.MAX_VALUE ? 0 : (int) (sign * result);
+        return result > 2147483647 ? 0 : (int) (sign * result);
     }
 }

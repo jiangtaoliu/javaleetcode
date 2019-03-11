@@ -12,7 +12,7 @@ public class ReverseInteger {
         while ((line = in.readLine()) != null) {
             int x = Integer.parseInt(line);
 
-            int ret = new Solution1().reverse(x);
+            int ret = new Solution3().reverse(x);
 
             String out = String.valueOf(ret);
 
