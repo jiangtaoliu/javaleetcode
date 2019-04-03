@@ -1,5 +1,7 @@
 package com.medium.LongestSubstringWithoutRepeatingCharacters;
 
+import com.eclipsesource.json.JsonArray;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -29,6 +31,7 @@ class Solution {
 
 public class LongestSubstringWithoutRepeatingCharacters {
     public static String stringToString(String input) {
+        //JsonArray need download minimal json jar and add to project structure - libraries
         return JsonArray.readFrom("[" + input + "]").get(0).asString();
     }
 
